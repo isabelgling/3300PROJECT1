@@ -3,7 +3,7 @@
 
 </svg>
 
-<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="https://d3js.org/d3.v5.min.js">
 
 d3.csv("dataset/2017collegedata.csv").then( function(data) {
 
@@ -12,9 +12,13 @@ d3.csv("dataset/2017collegedata.csv").then( function(data) {
 
 
         let circle = svg.append("circle")
-              .attr("cx", medianincome(d["Median_Earn"]))
+              .attr("cx", medianearnscale(d["Median_Earn"]))
               .attr("cy", admratescale(d["ADM_RATE"]))
               .attr("r", satscorescale(d[""]));
               
               
     });
+
+});
+
+</script>
